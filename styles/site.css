@@ -1,0 +1,69 @@
+:root{
+    --link-color: #6D5C49; 
+    --ink : #7F886A; 
+    --parchment: #E6E2D9} 
+
+body { 
+    color: var(--ink); 
+    background-color: var(--parchment); 
+    font-family: helvetica, sans-serif; margin: 1rem 5%; }
+
+a:link,a:visited { color: var(--link-color); text-decoration: none;}
+a:hover { text-decoration: underline;}
+a:active { background-color: var(--link-color); color: var(--parchment); text-decoration: none;}
+     
+footer { padding-top: 1rem; border-top: 3px solid var(--ink);}
+
+header h2 {
+    background-color: #a51c30;
+    font-variant: small-caps;
+    color: white;
+    padding: 0.5em;
+    margin: 0;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+ 
+ }
+
+main h3.home-photo {
+    background-image: url("../images/home-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    text-indent: -3000px;
+ }
+
+ header nav ul {
+    display: flex;
+    list-style-type: none;
+ }
+ 
+ header nav ul li {
+    padding-right: 10rem;
+ }
+
+ main h1 {
+   color: white;
+   font-size: 3.5rem;
+   text-shadow: 1px 1px 2px black;
+   text-align: center;
+   padding: 0.5em;
+   margin-top: 0;
+   margin-bottom: 0.25em;
+ }
+
+ main h2 {
+    color: white;
+   font-size: 1.5rem;
+   text-align: center;
+   padding: 0.5em;
+   margin-top: 0;
+   margin-bottom: 0.25em;
+ }
+
+ div.buttons ul {
+    display: flex;
+    list-style-type: none;
+ }
+ div.buttons ul li {
+    padding-right: 10rem;
+ }
