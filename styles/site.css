@@ -14,11 +14,10 @@ h1, h2, h3 {
 }
 
 a:link,
+a:active,
 a:visited { 
     color: var(--link-color); 
     text-decoration: none;}
-
-a:active { background-color: var(--link-color); color: var(--parchment); text-decoration: none;}
 
 
 /* header styles */    
@@ -63,20 +62,7 @@ header nav ul {
    margin-bottom: 0.25em;
  }
 
- div.buttons ul {
-    display: flex;
-    list-style-type: none;
-    position: relative;
- }
 
- div.buttons ul li a {
-    padding: 1rem 1rem;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    font-size: 1.2rem;
-    background-color: darkgrey;
-    color: white;
- }
 
 div.image-text-buttons {
     position: relative;
@@ -90,7 +76,8 @@ div.image-text-buttons {
     letter-spacing: 0.75rem;
     top: 40%;
     left: 9rem;
-    font-size: 6rem;
+    font-size: 8vw;
+    font-size-adjust: 10%;
   }
 
   .secondary-text {
@@ -99,28 +86,40 @@ div.image-text-buttons {
     color: grey;
     text-transform: uppercase;
     letter-spacing: 0.75rem;
-    top: 50%;
+    top: 55%;
     left: 9rem;
-    font-size: 1rem;
+    font-size: 1vw;
     padding-top: 1rem;
   }
   
-  .buttons {
+div.buttons {
     position: absolute;
     top: 60%;
     left: 9rem;
-    font-size: 1rem;
+    font-size: 2vw;
   }
 
-  .buttons ul {
+div.buttons ul {
+    display: flex;
+    list-style-type: none;
+    position: relative;
     padding-inline-start: 0px;
-  }
+ }
 
+div.buttons ul li a {
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    font-size: 1.5vw;
+    background-color: darkgrey;
+    color: white;
+ }
 
-.buttons ul li a:hover {
+div.buttons ul li a:hover {
     background-color: var(--ink);
     text-decoration: none;
 }
+
   
 div.image-text-buttons img { 
     width: 60%;
@@ -133,8 +132,7 @@ div.image-text-buttons img {
 footer {
     background-color: var(--ink);
     color: white;
-    padding-top: 1rem; 
-    border-top: 0.5px solid var(--link-color);
+    padding-top: 1rem;
 }
 
 footer div.footer-navigation{
@@ -172,13 +170,22 @@ footer div.footer-navigation p {
     overflow: auto;
     border: thin solid var(--text-color);
     margin: 1rem 0;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 1rem;
   }
 
+  section div.journal-and-photo-left {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 
-  section h2 {
+  section div.journal-and-photo-right {
+    display: flex;
+  }
+
+  section-left h2,
+  section-right h2 {
     font-family: optima, sans-serif;
     margin-top: 0;
     padding-top: 0;
@@ -224,7 +231,6 @@ div.allplans plans {
  #map_container {
     width: 100%;
     height: 850px;
-    border: solid grey 2px;
 }
 
 /* Photo Gallery styles */
