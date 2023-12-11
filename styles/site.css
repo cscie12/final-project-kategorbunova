@@ -6,49 +6,46 @@
 body { 
     color: var(--ink); 
     background-color: var(--parchment); 
-    font-family: helvetica, sans-serif; margin: 1rem 5%; }
+    font-family: Courier New, monospace; 
+    margin: 0px}
 
-a:link,a:visited { color: var(--link-color); text-decoration: none;}
-a:hover { text-decoration: underline;}
+a:link,
+a:visited { 
+    color: var(--link-color); 
+    text-decoration: none;}
+
 a:active { background-color: var(--link-color); color: var(--parchment); text-decoration: none;}
-     
-footer { padding-top: 1rem; border-top: 3px solid var(--ink);}
 
-header h2 {
-    background-color: #a51c30;
-    font-variant: small-caps;
-    color: white;
-    padding: 0.5em;
-    margin: 0;
-    font-family: 'Roboto Condensed', Arial, sans-serif;
- 
- }
 
-main h3.home-photo {
-    background-image: url("../images/home-photo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
-    text-indent: -3000px;
- }
+/* header styles */    
 
- header nav ul {
+header nav {
+    padding:1rem;
+    background-color: rgb(245, 245, 245);
+}
+
+header nav ul {
     display: flex;
     list-style-type: none;
- }
- 
- header nav ul li {
-    padding-right: 10rem;
+    margin: 0;
+    justify-content: right;
+    white-space: nowrap;
  }
 
- main h1 {
-   color: white;
-   font-size: 3.5rem;
-   text-shadow: 1px 1px 2px black;
-   text-align: center;
-   padding: 0.5em;
-   margin-top: 0;
-   margin-bottom: 0.25em;
+ header nav ul li {
+    margin-top: 1rem;
+    padding: 0;
+    margin-bottom: 1rem;
+ }
+
+ header nav ul li a {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+ }
+
+ header nav ul li a:hover{
+    color: var(--link-color);
+    font-weight: bold;
  }
 
  main h2 {
@@ -63,7 +60,119 @@ main h3.home-photo {
  div.buttons ul {
     display: flex;
     list-style-type: none;
+    position: relative;
  }
- div.buttons ul li {
-    padding-right: 10rem;
+
+ div.buttons ul li a {
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    background-color: darkgrey;
+    color: white;
  }
+
+div.image-text-buttons {
+    position: relative;
+ }
+  
+  .text {
+    position: absolute;
+    font-family: Optima, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    top: 40%;
+    left: 8rem;
+    font-size: 6rem;
+  }
+  
+  .buttons {
+    position: absolute;
+    top: 60%;
+    left: 8rem;
+    font-size: 1rem;
+  }
+
+  .buttons ul {
+    padding-inline-start: 0px;
+  }
+
+
+.buttons ul li a:hover {
+    background-color: var(--ink);
+    text-decoration: none;
+}
+  
+  img { 
+    width: 60%;
+    margin-left:40%;
+    height: auto;
+  }
+
+/*footer style*/
+
+footer {
+    background-color: var(--ink);
+    color: white;
+    padding-top: 1rem; 
+    border-top: 0.5px solid var(--link-color);
+}
+
+
+
+
+footer div.footer-navigation{
+    font-family: optima, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+footer div.footer-navigation ul {
+    padding-inline-start: 0px;
+    list-style-type: none;
+}
+
+footer div.footer-navigation h3 {
+    padding: 0;
+    margin: 0.25rem;
+}
+
+footer div.footer-navigation p {
+    padding: 0;
+    margin: 0.25rem;
+}
+
+
+/*
+ div.image-text-buttons div.image img{
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin-left: 40%;
+
+  }
+
+  div.text {
+    position: relative;
+    z-index: 1;
+    width: auto;
+    height: 20px;
+    top: 80%; 
+    left: 40%;
+  }
+
+div.text h1 {
+    font-size: 2rem; 
+    text-align: center;
+    font-family: Optima, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+
+*/
