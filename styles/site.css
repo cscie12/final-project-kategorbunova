@@ -9,6 +9,10 @@ body {
     font-family: Courier New, monospace; 
     margin: 0px}
 
+h1, h2, h3 {
+    font-family: optima, sans-serif;
+}
+
 a:link,
 a:visited { 
     color: var(--link-color); 
@@ -48,6 +52,8 @@ header nav ul {
     font-weight: bold;
  }
 
+ /* Main styles */  
+
  main h2 {
     color: white;
    font-size: 1.5rem;
@@ -81,16 +87,28 @@ div.image-text-buttons {
     font-family: Optima, sans-serif;
     color: white;
     text-transform: uppercase;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.75rem;
     top: 40%;
-    left: 8rem;
+    left: 9rem;
     font-size: 6rem;
+  }
+
+  .secondary-text {
+    position: absolute;
+    font-family: Optima, sans-serif;
+    color: grey;
+    text-transform: uppercase;
+    letter-spacing: 0.75rem;
+    top: 50%;
+    left: 9rem;
+    font-size: 1rem;
+    padding-top: 1rem;
   }
   
   .buttons {
     position: absolute;
     top: 60%;
-    left: 8rem;
+    left: 9rem;
     font-size: 1rem;
   }
 
@@ -104,7 +122,7 @@ div.image-text-buttons {
     text-decoration: none;
 }
   
-  img { 
+div.image-text-buttons img { 
     width: 60%;
     margin-left:40%;
     height: auto;
@@ -118,9 +136,6 @@ footer {
     padding-top: 1rem; 
     border-top: 0.5px solid var(--link-color);
 }
-
-
-
 
 footer div.footer-navigation{
     font-family: optima, sans-serif;
@@ -145,7 +160,7 @@ footer div.footer-navigation p {
 }
 
 
-/*styles for journal*/
+/* Journal styles */
 .hikingphoto {
     width: 300px;
     float: right;
@@ -170,7 +185,7 @@ footer div.footer-navigation p {
   }
 
 
-
+/* Plans Styles */
 
  div.allplans {
     display: flex;
@@ -204,35 +219,16 @@ div.allplans plans {
     margin-bottom: 1rem;
  }
 
+/* Map Styles */
 
-/*
- div.image-text-buttons div.image img{
-    max-width: 60%;
-    height: auto;
-    display: block;
-    margin-left: 40%;
+ #map_container {
+    width: 100%;
+    height: 850px;
+    border: solid grey 2px;
+}
 
-  }
+/* Photo Gallery styles */
 
-  div.text {
-    position: relative;
-    z-index: 1;
-    width: auto;
-    height: 20px;
-    top: 80%; 
-    left: 40%;
-  }
-
-div.text h1 {
-    font-size: 2rem; 
-    text-align: center;
-    font-family: Optima, sans-serif;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    position: relative;
-    z-index: 1;
-  }
-
-
-*/
+div.slideshow-photos img {
+    margin: 2rem;
+}
