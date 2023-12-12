@@ -47,21 +47,33 @@ header nav ul {
  }
 
  header nav ul li a:hover{
-    color: white;
+    color: var(--ink);
     font-weight: bold;
+ }
+
+ header nav ul li div.selectedtab a:link {
+    font-weight: bold;
+    border-bottom: #7F886A 2px ;
  }
 
  /* Main styles */  
 
  main h2 {
-    color: white;
+   color: white;
    font-size: 1.5rem;
    text-align: center;
-   padding: 0.5em;
-   margin-top: 0;
-   margin-bottom: 0.25em;
+   padding-bottom: 0.25rem;
+   margin: 0;
  }
 
+ main h3 {
+   color: var(--ink);
+   font-size: 1rem;
+   text-align: center;
+   padding: 0.0em;
+   margin-top: 0;
+   margin-bottom: 0em;
+ }
 
 
 div.image-text-buttons {
@@ -77,19 +89,20 @@ div.image-text-buttons {
     top: 40%;
     left: 9rem;
     font-size: 8vw;
-    font-size-adjust: 10%;
   }
 
   .secondary-text {
     position: absolute;
     font-family: Optima, sans-serif;
-    color: grey;
+    color: white;
     text-transform: uppercase;
     letter-spacing: 0.75rem;
     top: 55%;
     left: 9rem;
     font-size: 1vw;
     padding-top: 1rem;
+    font-weight: bold;
+    text-shadow:1px 1px 2px #6D5C49 ;
   }
   
 div.buttons {
@@ -125,6 +138,7 @@ div.image-text-buttons img {
     width: 60%;
     margin-left:40%;
     height: auto;
+    overflow-clip-margin: 0rem;
   }
 
 /*footer style*/
@@ -140,6 +154,7 @@ footer div.footer-navigation{
     display: flex;
     justify-content: space-around;
     text-align: center;
+    padding-bottom: 1rem;
   }
 
 footer div.footer-navigation ul {
@@ -150,19 +165,58 @@ footer div.footer-navigation ul {
 footer div.footer-navigation h3 {
     padding: 0;
     margin: 0.25rem;
+    margin-bottom: 0.75rem;
 }
 
 footer div.footer-navigation p {
     padding: 0;
     margin: 0.25rem;
+    word-wrap: break-word;
+    width: 20rem;
+    font-size: 0.9vw;
+}
+
+footer div.footer-navigation ul {
+    padding: 0;
+    margin: 0;
+}
+
+footer a:link, 
+footer a:visited, 
+footer a:hover,
+footer a:active {
+    padding: 0;
+    margin: 0.25rem;
+    word-wrap: break-word;
+    width: 20rem;
+    font-size: 0.7vw;
+    color: beige;
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+
+footer div.social-links {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
 }
 
 
 /* Journal styles */
+
+.hikingphotoplan {
+    width: 300px;
+    float: right;
+  }
+
 .hikingphoto {
     width: 300px;
     float: right;
     margin-left: 1rem;
+    margin-right: 1rem;
+    border: solid white 0.5rem;
   }
 
   section {
@@ -170,25 +224,46 @@ footer div.footer-navigation p {
     overflow: auto;
     border: thin solid var(--text-color);
     margin: 1rem 0;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 22%;
+    margin-right: 22%;
     padding: 1rem;
   }
 
   section div.journal-and-photo-left {
     display: flex;
     flex-direction: row-reverse;
+    margin-top: 1.5rem;
   }
 
   section div.journal-and-photo-right {
     display: flex;
+    margin-top: 1.5rem;
   }
 
-  section-left h2,
-  section-right h2 {
-    font-family: optima, sans-serif;
+  section div.journal-and-photo-left p,
+  section div.journal-and-photo-right p {
+    margin: 0;
+    color: #6D5C49;
+    font-family:Optima, sans-serif; ;
+  }
+
+  main section h2 {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 0.25rem;
+    margin: 0;
+    text-shadow:1px 1px 1px #6D5C49 ;
+
+  }
+ 
+  main section h3 {
+    color: var(--ink);
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.0em;
     margin-top: 0;
-    padding-top: 0;
+    margin-bottom: 0em;
   }
 
 
@@ -209,9 +284,13 @@ div.allplans plans {
     margin: 1em;
  }
 
- div.allplans plans h2 {
+ div.allplans plans h2,
+ div.allplans plans h3 {
     color: var(--link-color);
     font-family: optima, sans-serif;
+    text-align: center;
+    margin: 0rem;
+    padding: 0.5rem;
  }
 
  div.allplans plans p {
@@ -219,9 +298,26 @@ div.allplans plans {
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+    font-family: optima, sans-serif;
+ }
+
+ div.allplans plans p a:link {
+    width: 90%;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: Courier New, monospace; 
+ }
+
+ div.allplans div.photocredit {
+    position: absolute; 
+    bottom: 0; 
+    width:30px;
+    color: white;
+    font-size: medium;
  }
  
- div.allplans plans img {
+ div.allplans img {
     width: 100%;
     margin-bottom: 1rem;
  }
@@ -236,5 +332,25 @@ div.allplans plans {
 /* Photo Gallery styles */
 
 div.slideshow-photos img {
-    margin: 2rem;
+    margin: 1.2rem 1.5rem;
+    border: solid white 2rem;
+    align-items: center;
+}
+
+/* Lessons styles */
+
+div.lessons h2 {
+    margin-top: 5rem;
+    color: var(--link-color);
+    font-size: 3vw;
+    letter-spacing: 0.75rem;
+}
+
+div.lessons ul li {
+    margin: 5% 20%;
+    color: var(--link-color);
+    font-size: 1.5rem;
+    list-style-type: none;
+    font-family: Didot, serif;
+    letter-spacing: 0.25rem;
 }
