@@ -1,16 +1,38 @@
 :root{
-    --link-color: #6D5C49; 
-    --ink : #7F886A; 
-    --parchment: #E6E2D9} 
+    --link-color: #463A2F; 
+    --ink : #374E5C; /*#556246; */
+    --parchment: #eae3d9; /*#556246; #f0eee9;*/
+    --parchmenthomepage: #657B89;
+    --buttons: #eae3d9;
+    --buttonsactivated: #6D5C49;
+    --homepagetext: #ffffff;
+    --header: #fefefe;
+    --footer: #405766;
+    --journaltext: black;
+    --mainfont: "Optima", sans-serif;
+    --secondaryfont: "Vernanda", sans-serif;} 
+
+/*
+--silver: #CCCCC9ff;
+--cadet-gray: #9FB4C2ff;
+--slate-gray: #657B89ff;
+--davys-gray: #505149ff;
+--taupe: #423C35ff;
+--paynes-gray: #405766ff;*/
 
 body { 
     color: var(--ink); 
     background-color: var(--parchment); 
-    font-family: Courier New, monospace; 
+    font-family: var(--secondaryfont);
     margin: 0px}
 
+body div.image-text-buttons {
+    background-color: var(--parchmenthomepage);
+} 
+
+
 h1, h2, h3 {
-    font-family: optima, sans-serif;
+    font-family: var(--mainfont);
 }
 
 a:link,
@@ -21,39 +43,46 @@ a:visited {
 
 
 /* header styles */    
+header {
+    position: sticky;
+    top:0;
+    z-index: 100;
+}
 
 header nav {
     padding:1rem;
-    background-color: rgb(245, 245, 245);
+    margin: 0rem;
+    background-color: var(--header);
 }
 
 header nav ul {
     display: flex;
     list-style-type: none;
-    margin: 0;
     justify-content: right;
     white-space: nowrap;
+    background-color: var(--header)
  }
 
  header nav ul li {
-    margin-top: 1rem;
-    padding: 0;
-    margin-bottom: 1rem;
+    margin: 0rem;
+    padding: 0rem;
+    font-family: var(--secondaryfont);
  }
 
- header nav ul li a {
+ header nav ul li a:link {
     padding: 1rem 2rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
  }
 
  header nav ul li a:hover{
-    color: var(--ink);
-    font-weight: bold;
+    color: var(--parchment);
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
  }
+
 
  header nav ul li div.selectedtab a:link {
     font-weight: bold;
-    border-bottom: #7F886A 2px ;
  }
 
  /* Main styles */  
@@ -82,8 +111,8 @@ div.image-text-buttons {
   
   .text {
     position: absolute;
-    font-family: Optima, sans-serif;
-    color: white;
+    font-family: var(--mainfont);
+    color: var(--homepagetext);
     text-transform: uppercase;
     letter-spacing: 0.75rem;
     top: 40%;
@@ -93,7 +122,7 @@ div.image-text-buttons {
 
   .secondary-text {
     position: absolute;
-    font-family: Optima, sans-serif;
+    font-family: var(--mainfont);
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.75rem;
@@ -102,7 +131,7 @@ div.image-text-buttons {
     font-size: 1vw;
     padding-top: 1rem;
     font-weight: bold;
-    text-shadow:1px 1px 2px #6D5C49 ;
+    text-shadow:1px 1px 2px var(--link-color);
   }
   
 div.buttons {
@@ -120,37 +149,42 @@ div.buttons ul {
  }
 
 div.buttons ul li a {
-    padding: 1rem 1rem;
+    padding: 1.25rem 1.25rem;
     margin-top: 1rem;
     margin-right: 1rem;
-    font-size: 1.5vw;
-    background-color: darkgrey;
-    color: white;
+    font-size: 1.2vw;
+    background-color: var(--buttons);
+    color: var(--link-color);
+    font-family: var(--mainfont);
+
  }
 
 div.buttons ul li a:hover {
-    background-color: var(--ink);
+    background-color: var(--buttonsactivated);
     text-decoration: none;
+    color: white;
 }
 
   
 div.image-text-buttons img { 
+    display: block;
     width: 60%;
     margin-left:40%;
     height: auto;
-    overflow-clip-margin: 0rem;
+    zoom: 10%;
   }
 
 /*footer style*/
 
 footer {
-    background-color: var(--ink);
+    background-color: var(--footer);
     color: white;
     padding-top: 1rem;
+    margin-bottom: auto;
 }
 
-footer div.footer-navigation{
-    font-family: optima, sans-serif;
+footer div.footer-navigation {
+    font-family: var(--mainfont);
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -197,10 +231,11 @@ footer a:active {
 }
 
 
-footer div.social-links {
+footer div.social-links ul {
     display: flex;
     align-content: center;
     justify-content: space-around;
+    margin-top: 1.2rem;
 }
 
 
@@ -211,9 +246,17 @@ footer div.social-links {
     float: right;
   }
 
-.hikingphoto {
-    width: 300px;
+  div.journal-and-photo-left .hikingphoto {
+    width: 40%;
     float: right;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: solid white 0.5rem;
+  }
+
+  div.journal-and-photo-right .hikingphoto {
+    width: 40%;
+    float: left;
     margin-left: 1rem;
     margin-right: 1rem;
     border: solid white 0.5rem;
@@ -223,28 +266,39 @@ footer div.social-links {
     clear: both;
     overflow: auto;
     border: thin solid var(--text-color);
-    margin: 1rem 0;
+    margin: 1rem 0rem;
     margin-left: 22%;
     margin-right: 22%;
     padding: 1rem;
+    padding-bottom: 2rem;
   }
+
+  /*
 
   section div.journal-and-photo-left {
     display: flex;
+    flex-basis: 50%;
     flex-direction: row-reverse;
+    flex-grow: 1;
+    flex-shrink: 1;
     margin-top: 1.5rem;
   }
 
   section div.journal-and-photo-right {
     display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
     margin-top: 1.5rem;
   }
+
+  */
 
   section div.journal-and-photo-left p,
   section div.journal-and-photo-right p {
     margin: 0;
-    color: #6D5C49;
-    font-family:Optima, sans-serif; ;
+    color: var(--journaltext);
+    font-family: var(--mainfont);
+    margin-top: 1.5rem;
   }
 
   main section h2 {
@@ -261,9 +315,8 @@ footer div.social-links {
     color: var(--ink);
     font-size: 1rem;
     text-align: center;
-    padding: 0.0em;
-    margin-top: 0;
-    margin-bottom: 0em;
+    padding: 0.25rem;
+    margin-bottom: 0rem;
   }
 
 
@@ -280,14 +333,14 @@ div.allplans plans {
     display: block;
     color: black;
     flex-basis: 30%;
-    padding: 1em;
-    margin: 1em;
+    padding: 2rem;
+    margin: 2rem 1rem;
  }
 
  div.allplans plans h2,
  div.allplans plans h3 {
-    color: var(--link-color);
-    font-family: optima, sans-serif;
+    color: var(--buttonsactivated);
+    font-family: var(--mainfont);
     text-align: center;
     margin: 0rem;
     padding: 0.5rem;
@@ -298,23 +351,18 @@ div.allplans plans {
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
-    font-family: optima, sans-serif;
+    font-family: var(--mainfont);
  }
 
- div.allplans plans p a:link {
+ div.allplans plans p a:link,
+ div.allplans plans p a:visited, 
+ div.allplans plans p a:active {
     width: 90%;
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
-    font-family: Courier New, monospace; 
- }
-
- div.allplans div.photocredit {
-    position: absolute; 
-    bottom: 0; 
-    width:30px;
-    color: white;
-    font-size: medium;
+    color: var(--footer); 
+    font-family: "Courier New", monospace;
  }
  
  div.allplans img {
@@ -339,18 +387,19 @@ div.slideshow-photos img {
 
 /* Lessons styles */
 
-div.lessons h2 {
+div.lessons h1 {
     margin-top: 5rem;
-    color: var(--link-color);
+    color: var(--ink);
     font-size: 3vw;
-    letter-spacing: 0.75rem;
+    letter-spacing: 0.5rem;
+    text-align: center;
 }
 
 div.lessons ul li {
     margin: 5% 20%;
-    color: var(--link-color);
-    font-size: 1.5rem;
+    color: var(--ink);
+    font-size: 1.3rem;
     list-style-type: none;
-    font-family: Didot, serif;
-    letter-spacing: 0.25rem;
+    font-family: var(--secondaryfont);
+    letter-spacing: 0.3rem;
 }
