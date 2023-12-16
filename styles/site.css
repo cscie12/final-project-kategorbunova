@@ -156,6 +156,8 @@ div.buttons {
     top: 60%;
     left: 9rem;
     font-size: 2vw;
+    margin-top: 1rem;
+
   }
 
 div.buttons ul {
@@ -298,6 +300,12 @@ footer div.social-links ul {
     margin-top: 1.5rem;
   }
 
+  section.lasthike {
+    margin: 0;
+    padding: 0;
+    }
+
+
   main section h2 {
     color: var(--buttonsactivated);
     font-size: 1.25rem;
@@ -361,6 +369,7 @@ div.allplans plans {
     margin-top: 0.5rem;
     color: var(--footer); 
     font-family: "Courier New", monospace;
+    text-decoration: underline;
  }
  
  div.allplans img {
