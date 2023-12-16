@@ -386,11 +386,21 @@ div.allplans plans {
 
 /* Photo Gallery styles */
 
+div.slideshow-photos {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 25%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 div.slideshow-photos img {
     margin: 1.2rem 1.5rem;
     border: solid white 2rem;
     align-items: center;
 }
+
+
 
 /* Lessons styles */
 /*
