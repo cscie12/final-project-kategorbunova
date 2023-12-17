@@ -334,7 +334,7 @@ footer div.social-links ul {
     padding: 0rem 1rem;
   }
 
-div.allplans plans {
+div.allplans article {
     background-color: white;
     display: block;
     color: black;
@@ -343,8 +343,8 @@ div.allplans plans {
     margin: 2rem 1rem;
  }
 
- div.allplans plans h2,
- div.allplans plans h3 {
+ div.allplans article h2,
+ div.allplans article h3 {
     color: var(--buttonsactivated);
     font-family: var(--mainfont);
     text-align: center;
@@ -352,7 +352,7 @@ div.allplans plans {
     padding: 0.5rem;
  }
 
- div.allplans plans p {
+ div.allplans article p {
     width: 90%;
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
@@ -360,9 +360,9 @@ div.allplans plans {
     font-family: var(--mainfont);
  }
 
- div.allplans plans p a:link,
- div.allplans plans p a:visited, 
- div.allplans plans p a:active {
+ div.allplans article p a:link,
+ div.allplans article p a:visited, 
+ div.allplans article p a:active {
     width: 90%;
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
