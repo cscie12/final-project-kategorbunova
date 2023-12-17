@@ -5,7 +5,7 @@
 This website "Step by Step" is designed as part of the assignment for Harvard Extention School, class CSCIE12 Fall 2023 semester. It is centered around hiking in Pacific Northwest and documents my past experiences and future plans.
 
 
-## Purpose and goals of the site:
+## Purpose and Goals
 The goal of the website is to create a personal list of hiking trails: the ones I've already completed and the ones that are still on my list. The map widget will help put together the locations of both categories (visualized by color, which ones are complete). The website will also link all helpful information about those trails (e.g., national park website, AllTrails, directions on Google Maps). Once the hike is completed, the photos from the hike can be uploaded to the photo gallery, the marker on the map changed to "completed" and a short review/passage can be added about that hike.
 
 ## Audiences
